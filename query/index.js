@@ -44,7 +44,7 @@ app.post('/events', (req, res) => {
 
   handleEvent(type, data);
 
-  return res.send({});
+  return res.send({ status: 'OK' });
 });
 
 app.listen(4002, async () => {

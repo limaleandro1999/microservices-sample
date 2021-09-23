@@ -67,7 +67,7 @@ app.post('/events', async (req, res) => {
 
   }
 
-  return res.send({});
+  return res.send({ status: 'OK' });
 });
 
 app.listen(4001, () => {
