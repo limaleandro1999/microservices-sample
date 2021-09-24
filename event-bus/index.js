@@ -13,11 +13,11 @@ app.post('/events', (req, res) => {
 
   console.log('New Event', event);
 
-  axios.post('http://posts-srv:4000/events', event);
-  axios.post('http://comments-srv:4001/events', event);
-  axios.post('http://query-srv:4002/events', event);
-  axios.post('http://moderation-srv:4003/events', event);
-
+  axios.post('http://posts-srv:4000/events', event).catch(console.log);
+  axios.post('http://comments-srv:4001/events', event).catch(console.log);
+  axios.post('http://query-srv:4002/events', event).catch(console.log);
+  axios.post('http://moderation-srv:4003/events', event).catch(console.log);
+  
   return res.send({ status: 'OK' });
 });
 
